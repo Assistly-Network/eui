@@ -9188,62 +9188,6 @@ declare module '@elastic/eui' {
 	export { EuiCodeBlockImpl } from '@elastic/eui/src/components/code/_code_block';
 
 }
-declare module '@elastic/eui/src/components/code_editor/code_editor' {
-	import { Component, AriaAttributes } from 'react';
-	import AceEditor, { IAceEditorProps } from 'react-ace'; type SupportedAriaAttribute = 'aria-label' | 'aria-labelledby' | 'aria-describedby'; type SupportedAriaAttributes = Pick<AriaAttributes, SupportedAriaAttribute>;
-	export interface EuiCodeEditorProps extends SupportedAriaAttributes, Omit<IAceEditorProps, 'mode'> {
-	    width?: string;
-	    height?: string;
-	    onBlur?: IAceEditorProps['onBlur'];
-	    onFocus?: IAceEditorProps['onFocus'];
-	    isReadOnly?: boolean;
-	    setOptions: IAceEditorProps['setOptions'];
-	    cursorStart?: number;
-	    'data-test-subj'?: string;
-	    /**
-	     * Select the `brace` theme
-	     * The matching theme file must also be imported from `brace` (e.g., `import 'brace/theme/github';`)
-	     */
-	    theme?: IAceEditorProps['theme'];
-	    /**
-	     * Use string for a built-in mode or object for a custom mode
-	     */
-	    mode?: IAceEditorProps['mode'] | object;
-	    id?: string;
-	}
-	export interface EuiCodeEditorState {
-	    isHintActive: boolean;
-	    isEditing: boolean;
-	    name: string;
-	}
-	export class EuiCodeEditor extends Component<EuiCodeEditorProps, EuiCodeEditorState> {
-	    static defaultProps: {
-	        setOptions: {};
-	    };
-	    state: EuiCodeEditorState;
-	    idGenerator: (idSuffix?: string) => string;
-	    aceEditor: AceEditor | null;
-	    editorHint: HTMLButtonElement | null;
-	    aceEditorRef: (aceEditor: AceEditor | null) => void;
-	    onEscToExit: () => void;
-	    onKeydownAce: (event: KeyboardEvent) => void;
-	    onFocusAce: IAceEditorProps['onFocus'];
-	    onBlurAce: IAceEditorProps['onBlur'];
-	    startEditing: () => void;
-	    stopEditing(): void;
-	    isCustomMode(): boolean;
-	    setCustomMode(): void;
-	    componentDidMount(): void;
-	    componentDidUpdate(prevProps: EuiCodeEditorProps): void;
-	    render(): JSX.Element;
-	}
-	export {};
-
-}
-declare module '@elastic/eui' {
-	export { EuiCodeEditor, EuiCodeEditorProps } from '@elastic/eui/src/components/code_editor/code_editor';
-
-}
 declare module '@elastic/eui/src/components/collapsible_nav/collapsible_nav' {
 	import { FunctionComponent, HTMLAttributes, ReactElement, ReactNode } from 'react';
 	import { EuiOverlayMaskProps } from '@elastic/eui';

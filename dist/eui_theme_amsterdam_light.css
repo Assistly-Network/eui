@@ -2456,37 +2456,6 @@ html {
   .euiCodeBlock .hljs-link {
     text-decoration: underline; }
 
-.euiCodeEditorWrapper {
-  position: relative; }
-  .euiCodeEditorWrapper .ace_hidden-cursors {
-    opacity: 0; }
-  .euiCodeEditorWrapper.euiCodeEditorWrapper-isEditing .ace_hidden-cursors {
-    opacity: 1; }
-
-.euiCodeEditorKeyboardHint {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(255, 255, 255, 0.7);
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: center;
-          justify-content: center;
-  -webkit-align-items: center;
-          align-items: center;
-  opacity: 0;
-  cursor: pointer;
-  height: 100%;
-  width: 100%; }
-  .euiCodeEditorKeyboardHint:focus {
-    opacity: 1;
-    border: 2px solid #07C;
-    z-index: 1000; }
-  .euiCodeEditorKeyboardHint.euiCodeEditorKeyboardHint-isInactive {
-    display: none; }
-
 .euiCollapsibleNav {
   border-left: none;
   box-shadow: 0 2.7px 9px rgba(0, 0, 0, 0.13), 0 9.4px 24px rgba(0, 0, 0, 0.09), 0 21.8px 43px rgba(0, 0, 0, 0.08);

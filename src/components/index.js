@@ -55,8 +55,6 @@ export { EuiCard, EuiCheckableCard } from './card';
 
 export { EuiCode, EuiCodeBlock, EuiCodeBlockImpl } from './code';
 
-export { EuiCodeEditor } from './code_editor';
-
 export { EuiCollapsibleNav, EuiCollapsibleNavGroup } from './collapsible_nav';
 
 export {
