@@ -176,15 +176,13 @@ export class EuiCodeEditor extends Component<
 
   setCustomMode() {
     if (this.aceEditor !== null) {
+      // eslint-disable-next-line
+      // @ts-ignore
       this.aceEditor.editor.getSession().setMode(this.props.mode);
     }
   }
 
   componentDidMount() {
-    if (typeof window === 'undefined') {
-      return;
-    }
-
     if (this.isCustomMode()) {
       this.setCustomMode();
     }
@@ -207,20 +205,12 @@ export class EuiCodeEditor extends Component<
   }
 
   componentDidUpdate(prevProps: EuiCodeEditorProps) {
-    if (typeof window === 'undefined') {
-      return;
-    }
-
     if (this.props.mode !== prevProps.mode && this.isCustomMode()) {
       this.setCustomMode();
     }
   }
 
   render() {
-    if (typeof window === 'undefined') {
-      return null;
-    }
-
     const {
       width,
       height,

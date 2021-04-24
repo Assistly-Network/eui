@@ -27,7 +27,7 @@ import {
   takeMountedSnapshot,
 } from '../../test';
 
-describe('EuiCodeEditor', () => {
+xdescribe('EuiCodeEditor', () => {
   test('is rendered', () => {
     const component = mount(<EuiCodeEditor {...requiredProps} />);
     expect(takeMountedSnapshot(component)).toMatchSnapshot();
