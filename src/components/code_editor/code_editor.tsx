@@ -48,7 +48,7 @@ type SupportedAriaAttributes = Pick<AriaAttributes, SupportedAriaAttribute>;
 
 export interface EuiCodeEditorProps
   extends SupportedAriaAttributes,
-    Omit<IAceEditorProps, 'mode'> {
+  Omit<IAceEditorProps, 'mode'> {
   width?: string;
   height?: string;
   onBlur?: IAceEditorProps['onBlur'];
@@ -287,6 +287,10 @@ export class EuiCodeEditor extends Component<
         </p>
       </button>
     );
+
+    if (typeof window === 'undefined') {
+      return null;
+    }
 
     return (
       <div
