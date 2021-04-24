@@ -9,7 +9,6 @@ coverage/
 reports/
 tmp/
 dist/
-lib/
 es/
 test-env/
 .idea
