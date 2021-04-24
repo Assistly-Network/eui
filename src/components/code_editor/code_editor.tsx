@@ -181,6 +181,10 @@ export class EuiCodeEditor extends Component<
   }
 
   componentDidMount() {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     if (this.isCustomMode()) {
       this.setCustomMode();
     }
@@ -203,12 +207,20 @@ export class EuiCodeEditor extends Component<
   }
 
   componentDidUpdate(prevProps: EuiCodeEditorProps) {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     if (this.props.mode !== prevProps.mode && this.isCustomMode()) {
       this.setCustomMode();
     }
   }
 
   render() {
+    if (typeof window === 'undefined') {
+      return null;
+    }
+
     const {
       width,
       height,
@@ -287,10 +299,6 @@ export class EuiCodeEditor extends Component<
         </p>
       </button>
     );
-
-    if (typeof window === 'undefined') {
-      return null;
-    }
 
     return (
       <div
