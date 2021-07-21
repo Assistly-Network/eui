@@ -38,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/assistly-network/eui.git"
+    "url": "https://github.com/Assistly-Network/eui.git"
   },
   "resolutions": {
     "**/trim": "0.0.3"
